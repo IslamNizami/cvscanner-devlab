@@ -1,0 +1,35 @@
+```properties
+# Application
+spring.application.name=cvscanner-devlab
+
+# PostgreSQL Database
+spring.datasource.url=jdbc:postgresql://localhost:3232/cvscanner
+spring.datasource.username=cvuser
+spring.datasource.password=cvpassword
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# Spring Batch
+spring.batch.jdbc.initialize-schema=always
+spring.batch.job.enabled=false
+
+# File Upload Limits
+spring.servlet.multipart.max-file-size=50MB
+spring.servlet.multipart.max-request-size=50MB
+
+# Email Configuration (SMTP example)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${MAIL_USERNAME}
+spring.mail.password=${MAIL_PASSWORD}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# CV Scanner File Storage
+cvscanner.upload-dir=uploads
+```
